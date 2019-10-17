@@ -390,6 +390,7 @@ body {
 h3 {
   font-family: "PlayfairDisplayBold";
   font-size: 22px;
+  text-align: center;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #413d4b;
@@ -406,6 +407,10 @@ h4 {
   font-family: "PlayfairDisplayRegular";
   font-size: 14px;
   color: rgba(47, 45, 53, 0.75);
+}
+
+a:hover {
+  box-shadow: 0 0 10px #2ab6b1;
 }
 
 header {
@@ -455,7 +460,7 @@ header ul a:hover {
   header .menu-mob .menu-btn {
     display: flex;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
     width: 26px;
@@ -645,6 +650,7 @@ header .menu-mob .menu-btn > span::after {
   margin-left: 100px;
 }
 .story h3 {
+  text-align: left;
   margin-bottom: 20px;
 }
 .story p {
@@ -730,7 +736,7 @@ header .menu-mob .menu-btn > span::after {
   padding: 30px 30px 0px;
 }
 .expertise .container .expertise-grid div:hover {
-  background-color: #c6ebeb;
+  background-color: #ecf3f3;
 }
 .expertise .container .expertise-grid div:nth-child(-n+3) {
   border-bottom: 1px solid #ebebeb;
@@ -762,19 +768,28 @@ header .menu-mob .menu-btn > span::after {
   .expertise .container .expertise-grid div:nth-child(4) {
     border-bottom: 1px solid #ebebeb;
   }
+  .expertise .container .expertise-grid div:hover {
+    background-color: transparent;
+  }
 }
 @media all and (max-width: 576px) {
+  .expertise .container {
+    padding: 65px 15px 49px;
+  }
   .expertise .container .caption {
     margin-bottom: 10px;
   }
   .expertise .container .expertise-grid {
     display: grid;
-    grid-template: 260px 260px 260px 260px 260px 260px/1fr;
+    grid-template: 280px 280px 280px 280px 280px 280px/1fr;
     padding: 0 20px;
   }
   .expertise .container .expertise-grid div:nth-child(-n+5) {
     border-right: none;
     border-bottom: 1px solid #ebebeb;
+  }
+  .expertise .container .expertise-grid div:hover {
+    background-color: transparent;
   }
 }
 
@@ -786,24 +801,116 @@ header .menu-mob .menu-btn > span::after {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 65px 0 68px;
+}
+.team .container > p:first-of-type {
+  font-family: "PlayfairDisplayRegular";
+  font-size: 14px;
+  letter-spacing: 1.05px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 45px;
+}
+.team .container > p:first-of-type::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: #c6c4c9;
+  margin: 0 auto;
+  margin-top: 22px;
 }
 .team .container h3 {
   color: #fff;
+  margin-bottom: 11px;
 }
 .team .container .team-grid {
   display: grid;
   grid-template: 310px/1fr 1fr 1fr 1fr;
   grid-column-gap: 20px;
+  margin-bottom: 70px;
+}
+.team .container .team-member-block {
+  width: 220px;
+  height: 310px;
+  box-sizing: border-box;
+  border: 1px solid #78788b;
 }
 .team .container .team-member-block div {
-  width: 220px;
+  width: 100%;
   height: 230px;
   overflow: hidden;
   position: relative;
+  margin-bottom: 20px;
 }
 .team .container .team-member-block div img {
   position: absolute;
   width: 100%;
+}
+.team .container .team-member-block h4 {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.team .container .team-member-block p {
+  font-size: 13px;
+  color: #fafafa;
+  text-align: center;
+  text-transform: uppercase;
+}
+.team .container .team-member-block:hover {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+.team .container p:last-of-type {
+  letter-spacing: 0.7px;
+  text-align: center;
+  color: #f3f3f3;
+  margin-bottom: 25px;
+}
+.team .container a {
+  font-family: "HammersmithOneRegular";
+  font-size: 16px;
+  color: #00e0d0;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 118px;
+  height: 38px;
+  border: 1px solid #2ab6b1;
+  background: transparent;
+  width: 140px;
+}
+@media all and (max-width: 990px) {
+  .team .container .team-member-block {
+    width: 190px;
+  }
+}
+@media all and (max-width: 890px) {
+  .team .container .team-member-block {
+    width: 160px;
+  }
+}
+@media all and (max-width: 768px) {
+  .team .container .team-grid {
+    display: grid;
+    grid-template: 310px 310px/1fr 1fr;
+    grid-gap: 20px;
+  }
+  .team .container .team-member-block {
+    width: 220px;
+  }
+}
+@media all and (max-width: 576px) {
+  .team .container .team-grid {
+    display: grid;
+    grid-template: 310px 310px 310px 310px/1fr;
+    grid-gap: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
