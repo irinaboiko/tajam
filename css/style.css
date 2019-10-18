@@ -913,4 +913,69 @@ header .menu-mob .menu-btn > span::after {
   }
 }
 
+.works {
+  box-sizing: border-box;
+  padding: 65px 0 70px;
+}
+.works .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 68px;
+}
+.works .container h3 {
+  color: #413d4b;
+}
+.works .container p {
+  letter-spacing: 0.7px;
+  color: #413d4b;
+  position: relative;
+  margin-right: 19px;
+}
+.works .container p:after {
+  content: url("../img/arrow-works.png");
+  position: absolute;
+  width: 8px;
+  height: 14px;
+  margin-left: 9px;
+}
+.works .gallery {
+  background-image: url("../img/temporary-gallery.jpeg");
+  height: 400px;
+  margin-bottom: 70px;
+}
+.works a {
+  font-family: "HammersmithOneRegular";
+  font-size: 16px;
+  color: #00e0d0;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 118px;
+  height: 38px;
+  border: 1px solid #2ab6b1;
+  background: transparent;
+  width: 140px;
+  margin: 0 auto;
+}
+@media all and (max-width: 576px) {
+  .works .container {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  .works h3 {
+    margin-bottom: 50px;
+  }
+  .works p {
+    align-self: flex-end;
+  }
+}
+
+.review {
+  background: url("../img/background-review.jpeg") center/cover no-repeat;
+}
+
 /*# sourceMappingURL=style.css.map */
