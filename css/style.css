@@ -416,31 +416,32 @@ header {
   right: 0;
   height: 80px;
 }
+header .menu-mob {
+  display: none;
+}
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-header .menu-mob {
-  display: none;
-}
-header ul {
+header .container ul {
   display: flex;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
-header ul li {
+header .container ul li {
   margin-left: 27px;
 }
-header ul a {
+header .container ul a {
   font-family: "RobotoBlack";
   font-size: 13px;
   color: #fff;
   text-decoration: none;
   text-transform: capitalize;
 }
-header ul a:hover {
+header .container ul a:hover {
   color: #00e0d0;
 }
 
@@ -685,10 +686,16 @@ header .menu-mob .menu-btn > span::after {
     display: block;
     padding: 65px 40px 65px 40px;
   }
+  .story .container h3 {
+    text-align: center;
+  }
   .story .container div {
     margin-left: 0;
   }
-  .story img {
+  .story .container a {
+    margin: 0 auto;
+  }
+  .story .container img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -832,7 +839,7 @@ header .menu-mob .menu-btn > span::after {
   display: grid;
   grid-template: 310px/1fr 1fr 1fr 1fr;
   grid-column-gap: 20px;
-  margin-bottom: 70px;
+  margin-bottom: 65px;
 }
 .team .container .team-member-block {
   width: 220px;
@@ -953,10 +960,24 @@ header .menu-mob .menu-btn > span::after {
 .works .container a:hover::after {
   content: url("../img/arrow-works-hover.png");
 }
-.works .gallery {
-  background-image: url("../img/temporary-gallery.jpeg");
-  height: 400px;
-  margin-bottom: 70px;
+.works .container-fluid {
+  margin-bottom: 75px;
+}
+.works .container-fluid .thumb img:hover {
+  transform: rotateY(180deg);
+  transition-duration: 1s;
+}
+.works .container-fluid .thumb {
+  padding: 0;
+}
+.works .container-fluid .thumb a {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.works .container-fluid .thumb img {
+  width: 100%;
+  height: 100%;
 }
 .works > a {
   font-family: "HammersmithOneRegular";
@@ -992,6 +1013,52 @@ header .menu-mob .menu-btn > span::after {
 }
 .review {
   background: url("../img/background-review.jpeg") center/cover no-repeat;
+}
+.review .container {
+  padding: 25px 0 83px;
+}
+.review .container .slider-text-review {
+  color: #fff;
+  text-align: center;
+}
+.review .container .slider-text-review .quote {
+  font-family: "PlayfairDisplayRegular";
+  font-size: 100px;
+  margin-bottom: -45px;
+}
+.review .container .slider-text-review .text-review {
+  font-family: "PlayfairDisplayRegular";
+  font-size: 16px;
+  line-height: 1.55;
+  letter-spacing: 0.35px;
+  padding: 0 85px;
+  margin-bottom: 50px;
+}
+.review .container .slider-text-review h4 {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.review .container .slider-text-review .client-position {
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 55px;
+}
+.review .container .slider-clients .slick-list {
+  width: 100%;
+  padding: 0;
+}
+.review .container .slider-clients .slick-list .slick-track {
+  display: flex;
+  justify-content: center;
+}
+.review .container .slider-clients .draggable {
+  padding: 0 !important;
+}
+.review .container .slider-clients .slick-slide {
+  width: 45px !important;
+  height: 45px;
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
