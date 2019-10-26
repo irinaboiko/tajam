@@ -15,32 +15,32 @@
 <body>
     <header>
         <div class="container">
-            <a href="#"><img src="./img/logo-name.png" alt="logo-image"></a>
-            <nav class="menu-desktop">
+            <a href="#home"><img src="./img/logo-name.png" alt="logo-image"></a>
+            <nav class="menu-desktop" id="menu-desktop">
                 <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">EXPERTISE</a></li>
-                    <li><a href="#">TEAMS</a></li>
-                    <li><a href="#">WORKS</a></li>
-                    <li><a href="#">PEOPLE SAY</a></li>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#expertise">EXPERTISE</a></li>
+                    <li><a href="#team">TEAMS</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="#review">PEOPLE SAY</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </nav>
             
-            <div class="menu-mob">
+            <div class="menu-mob" id="menu-mob">
                 <input id="btn-mob-menu" type="checkbox">
                 <label class="menu-btn" for="btn-mob-menu">
                     <span></span>
                 </label>
                 <nav>
                     <ul class="menu-box">
-                        <li><a class="menu-item" href="#">HOME</a></li>
-                        <li><a class="menu-item" href="#">ABOUT</a></li>
-                        <li><a class="menu-item" href="#">EXPERTISE</a></li>
-                        <li><a class="menu-item" href="#">TEAMS</a></li>
-                        <li><a class="menu-item" href="#">WORKS</a></li>
-                        <li><a class="menu-item" href="#">PEOPLE SAY</a></li>
+                        <li><a class="menu-item" href="#home">HOME</a></li>
+                        <li><a class="menu-item" href="#about">ABOUT</a></li>
+                        <li><a class="menu-item" href="#expertise">EXPERTISE</a></li>
+                        <li><a class="menu-item" href="#team">TEAMS</a></li>
+                        <li><a class="menu-item" href="#works">WORKS</a></li>
+                        <li><a class="menu-item" href="#review">PEOPLE SAY</a></li>
                         <li><a class="menu-item" href="#">CONTACT</a></li>
                     </ul>
                 </nav>
@@ -51,7 +51,7 @@
     </header>
 
     
-    <section class="promo">
+    <section class="promo" id="home">
         <div class="container">
             <div class="slider-promo">
                 <div class="slide-promo">
@@ -85,7 +85,7 @@
 
 
     <main>
-        <section class="story">
+        <section class="story" id="about">
             <div class="container">
                 <img src="./img/logo-story.png" alt="logo-image">
                 <div>
@@ -101,7 +101,7 @@
 
         </section>
 
-        <section class="expertise">
+        <section class="expertise" id="expertise">
             <div class="container">
                 <h3>EXPERTISE</h3>
                 <p class="caption">Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
@@ -140,7 +140,7 @@
             </div>
         </section>
 
-        <section class="team">
+        <section class="team" id="team">
             <div class="container">
                 <h3>MEET OUR AMAZING TEAM</h3>
                 <p>Lorem ipsum dolor sit amet proin gravida nibh vel velit</p>
@@ -179,7 +179,7 @@
             </div>
         </section>
 
-        <section class="works">
+        <section class="works" id="works">
             <div class="container">
                 <h3>OUR WORKS</h3>
                 <a class="projekts-link" href="#">See All Project in dribbble</a>
@@ -251,7 +251,7 @@
             <a href="#">LOAD MORE</a>
         </section>
 
-        <section class="review">
+        <section class="review" id="review">
             <div class="container">
                 <div class="slider-text-review">
                     <div>
@@ -291,6 +291,56 @@
                     <img src="./img/portret-3.png" alt="client-image">
                     <img src="./img/portret-4.png" alt="client-image">
                     <img src="./img/portret-5.png" alt="client-image">
+                </div>
+            </div>
+        </section>
+
+        <section class="form-and-clients">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-12 form">
+                        <h3>GIVE US A GOOD NEWS</h3>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" placeholder="Subject">
+                            </div>
+                            <div class="form-group textarea">
+                                <textarea class="form-control" placeholder="Your Massage"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">SUBMIT</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-5 col-md-6 col-sm-12 col-12 clients">
+                        <h3>OUR HAPPY CLIENT</h3>
+                        <div class="row justify-content-around align-items-center">
+                            <img src="./img/logo-zara.png" alt="logo-image">
+                            <img src="./img/logo-mango.png" alt="logo-image">
+                        </div>
+                        <div class="row justify-content-around align-items-center">
+                            <img src="./img/logo-barneys-new-york.png" alt="logo-image">
+                            <img src="./img/logo-gucci.png" alt="logo-image">
+                        </div>
+                        <div class="row justify-content-around align-items-center">
+                            <img src="./img/logo-calvin-klein.png" alt="logo-image">
+                            <img src="./img/logo-nike.png" alt="logo-image">
+                        </div>
+                        <div class="row justify-content-around align-items-center">
+                            <img src="./img/logo-converse.png" alt="logo-image">
+                            <img src="./img/logo-puma.png" alt="logo-image">
+                        </div>
+                        <div class="row justify-content-around align-items-center">
+                            <img src="./img/logo-levis.png" alt="logo-image">
+                            <img src="./img/logo-billabong.png" alt="logo-image">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

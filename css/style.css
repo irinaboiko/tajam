@@ -585,6 +585,7 @@ header .menu-mob .menu-btn > span::after {
   width: 118px;
   height: 38px;
   border: 1px solid #2ab6b1;
+  border-radius: 2px;
   background: transparent;
   margin: 0 auto 10px;
 }
@@ -675,6 +676,7 @@ header .menu-mob .menu-btn > span::after {
   width: 118px;
   height: 38px;
   border: 1px solid #2ab6b1;
+  border-radius: 2px;
   background: transparent;
 }
 .story a:hover {
@@ -892,6 +894,7 @@ header .menu-mob .menu-btn > span::after {
   width: 118px;
   height: 38px;
   border: 1px solid #2ab6b1;
+  border-radius: 2px;
   background: transparent;
   width: 140px;
 }
@@ -963,11 +966,8 @@ header .menu-mob .menu-btn > span::after {
 .works .container-fluid {
   margin-bottom: 75px;
 }
-.works .container-fluid .thumb img:hover {
-  transform: rotateY(180deg);
-  transition-duration: 1s;
-}
 .works .container-fluid .thumb {
+  background-color: #1abc9c;
   padding: 0;
 }
 .works .container-fluid .thumb a {
@@ -976,8 +976,14 @@ header .menu-mob .menu-btn > span::after {
   overflow: hidden;
 }
 .works .container-fluid .thumb img {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
   width: 100%;
   height: 100%;
+}
+.works .container-fluid .thumb img:hover {
+  opacity: 0.5;
+  cursor: zoom-in;
 }
 .works > a {
   font-family: "HammersmithOneRegular";
@@ -991,6 +997,7 @@ header .menu-mob .menu-btn > span::after {
   width: 118px;
   height: 38px;
   border: 1px solid #2ab6b1;
+  border-radius: 2px;
   background: transparent;
   width: 140px;
   margin: 0 auto;
@@ -1059,6 +1066,86 @@ header .menu-mob .menu-btn > span::after {
   width: 45px !important;
   height: 45px;
   margin-right: 20px;
+}
+
+.form-and-clients .container {
+  padding-top: 60px;
+}
+.form-and-clients .container .form h3 {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.form-and-clients .container .form .form-group {
+  height: 45px;
+  margin-bottom: 25px;
+}
+.form-and-clients .container .form input {
+  font-family: "RobotoLight";
+  font-size: 14px;
+  color: #413d4b;
+  border-color: #e5e5e5;
+  text-transform: capitalize;
+  border-radius: 0;
+  height: 100%;
+  padding: 5px 20px;
+}
+.form-and-clients .container .form .textarea {
+  height: 200px;
+  margin-bottom: 15px;
+}
+.form-and-clients .container .form textarea {
+  font-family: "RobotoLight";
+  font-size: 14px;
+  color: #413d4b;
+  resize: none;
+  border-color: #e5e5e5;
+  text-transform: capitalize;
+  border-radius: 0;
+  height: 100%;
+  padding: 10px 20px;
+}
+.form-and-clients .container .form button {
+  font-family: "HammersmithOneRegular";
+  font-size: 16px;
+  color: #00e0d0;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 118px;
+  height: 38px;
+  border: 1px solid #2ab6b1;
+  border-radius: 2px;
+  background: transparent;
+}
+.form-and-clients .container .form button:hover {
+  box-shadow: 0 0 10px #2ab6b1;
+}
+.form-and-clients .container .clients {
+  padding: 0 10px;
+}
+.form-and-clients .container .clients h3 {
+  text-align: left;
+  margin-bottom: 45px;
+}
+.form-and-clients .container .clients div {
+  padding-bottom: 45px;
+}
+.form-and-clients .container .clients img {
+  height: 100%;
+}
+
+@media all and (max-width: 768px) {
+  .form-and-clients .container .form h3 {
+    text-align: center;
+  }
+  .form-and-clients .container .form button {
+    margin: 0 auto;
+  }
+  .form-and-clients .container .clients h3 {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

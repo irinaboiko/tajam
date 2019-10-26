@@ -1,4 +1,22 @@
 $(document).ready(function(){
+  $("#menu-desktop").on("click","a", function (event) {
+      event.preventDefault();
+      let id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1500);
+  });
+});
+
+$(document).ready(function(){
+  $("#menu-mob").on("click","a", function (event) {
+      event.preventDefault();
+      let id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1500);
+  });
+});
+
+$(document).ready(function(){
     $('.slider-promo').slick({
         dots: true,
         autoplay: false,
