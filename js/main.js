@@ -26,22 +26,25 @@ $(document).ready(function(){
         pauseOnHover: true,
         pauseOnDotsHover: true,
     });
-    $('.slider-text-review').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-clients',
-        draggable: false,
-      });
-      $('.slider-clients').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        asNavFor: '.slider-text-review',
-        dots: false,
-        arrows: true,
-        centerMode: true,
-        centerPadding: '60px',
-        focusOnSelect: true,
-      });
+});
+
+$(document).ready(function(){
+  $('.slider-text-review').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    draggable: false,
+  //  asNavFor: '.slider-clients',
+  });
+});
+$(document).ready(function(){
+  $('.slider-clients').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    //centerPadding: '60px',
+    asNavFor: '.slider-text-review',
+  });
 });

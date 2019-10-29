@@ -1022,7 +1022,7 @@ header .menu-mob .menu-btn > span::after {
   background: url("../img/background-review.jpeg") center/cover no-repeat;
 }
 .review .container {
-  padding: 25px 0 83px;
+  padding: 25px 0 50px;
 }
 .review .container .slider-text-review {
   color: #fff;
@@ -1051,25 +1051,54 @@ header .menu-mob .menu-btn > span::after {
   text-transform: uppercase;
   margin-bottom: 55px;
 }
-.review .container .slider-clients .slick-list {
-  width: 100%;
-  padding: 0;
-}
-.review .container .slider-clients .slick-list .slick-track {
-  display: flex;
-  justify-content: center;
-}
-.review .container .slider-clients .draggable {
-  padding: 0 !important;
+.review .container .slider-clients {
+  width: 320px;
+  margin: 0 auto;
 }
 .review .container .slider-clients .slick-slide {
-  width: 45px !important;
+  width: 45px;
   height: 45px;
-  margin-right: 20px;
+  margin: 0 7px;
+}
+.review .container .slider-clients .slick-center {
+  width: 70px;
+  height: 75px;
+}
+.review .container .slider-clients .slick-prev {
+  top: 50%;
+  left: -35px;
+  margin-top: -11px;
+  z-index: 99;
+}
+.review .container .slider-clients .slick-prev::before {
+  content: url("../img/arrow-back.png");
+  display: block;
+  position: absolute;
+  width: 11px;
+  height: 21px;
+}
+.review .container .slider-clients .slick-prev:hover:before {
+  content: url("../img/arrow-back-hover.png");
+}
+.review .container .slider-clients .slick-next {
+  top: 50%;
+  right: -45px;
+  margin-top: -11px;
+  z-index: 99;
+}
+.review .container .slider-clients .slick-next::before {
+  content: url("../img/arrow-forward.png");
+  display: block;
+  position: absolute;
+  width: 11px;
+  height: 21px;
+}
+.review .container .slider-clients .slick-next:hover:before {
+  content: url("../img/arrow-forward-hover.png");
 }
 
 .form-and-clients .container {
-  padding-top: 60px;
+  padding: 60px 0 40px;
 }
 .form-and-clients .container .form h3 {
   text-align: left;
@@ -1146,6 +1175,44 @@ header .menu-mob .menu-btn > span::after {
   .form-and-clients .container .clients h3 {
     text-align: center;
   }
+}
+footer {
+  background: url("../img/background-review.jpeg") center/cover no-repeat;
+  color: #fff;
+  text-align: left;
+}
+footer .container {
+  padding-top: 70px;
+  padding-bottom: 65px;
+}
+footer .container .contact img {
+  margin-bottom: 23px;
+}
+footer .container .contact p {
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  margin-bottom: 72px;
+}
+footer .container .contact a {
+  font-family: "RobotoRegular";
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+footer .container .location {
+  padding-top: 18px;
+}
+footer .container .location h4 {
+  color: #fff;
+  margin-bottom: 35px;
+}
+footer .container .location p {
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  margin: 0 25px;
+}
+footer .container .location .adress {
+  margin-bottom: 13px;
 }
 
 /*# sourceMappingURL=style.css.map */
