@@ -1113,10 +1113,14 @@ header .menu-mob .menu-btn > span::after {
   font-size: 14px;
   color: #413d4b;
   border-color: #e5e5e5;
-  text-transform: capitalize;
   border-radius: 0;
   height: 100%;
   padding: 5px 20px;
+}
+.form-and-clients .container .form ::placeholder {
+  font-family: "RobotoLight";
+  font-size: 14px;
+  color: #413d4b;
 }
 .form-and-clients .container .form .textarea {
   height: 200px;
@@ -1128,7 +1132,6 @@ header .menu-mob .menu-btn > span::after {
   color: #413d4b;
   resize: none;
   border-color: #e5e5e5;
-  text-transform: capitalize;
   border-radius: 0;
   height: 100%;
   padding: 10px 20px;
@@ -1210,14 +1213,11 @@ footer .container .contact a:hover {
 footer .container .location {
   padding-top: 18px;
 }
-footer .container .location p {
-  line-height: 1.8;
-  letter-spacing: 0.3px;
-  margin: 0 25px;
-}
 footer .container .location .adress {
   position: relative;
-  margin-bottom: 13px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  margin: 0 25px 13px;
 }
 footer .container .location .adress::before {
   content: url("../img/icon-map.png");
@@ -1229,6 +1229,11 @@ footer .container .location .adress::before {
 }
 footer .container .location .phone-number {
   position: relative;
+  color: #fff;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  margin: 0 25px;
 }
 footer .container .location .phone-number::before {
   content: url("../img/icon-phone.png");
@@ -1252,6 +1257,35 @@ footer .container .social form input {
   height: 45px;
   background-color: transparent;
   border-radius: 0;
+  margin-right: 13px;
+}
+footer .container .social form ::-webkit-input-placeholder {
+  font-family: "RobotoLight";
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+footer .container .social form ::-moz-placeholder {
+  font-family: "RobotoLight";
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+footer .container .social form :-moz-placeholder {
+  font-family: "RobotoLight";
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  color: #fff;
+}
+footer .container .social form :-ms-input-placeholder {
+  font-family: "RobotoLight";
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  color: #fff;
 }
 footer .container .social form .send {
   width: 70px;

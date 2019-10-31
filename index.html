@@ -337,6 +337,7 @@
                         <h3>GIVE US A GOOD NEWS</h3>
                         <form method="POST" action="https://formspree.io/irinaboiko95@gmail.com">
                             <div class="form-group">
+                                <input type="hidden" name="main-form" value="Основная форма">
                                 <input class="form-control" type="text" name="name" required placeholder="Name">
                             </div>
                             <div class="form-group">
@@ -397,13 +398,13 @@
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 location">
                     <h4>OUR STUDIO</h4>
                     <p class="adress">Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia</p>
-                    <p class="phone-number">(+62) 21-2224 3333</p>
+                    <a class="phone-number" href="tel: +622122243333">(+62) 21-2224 3333</a>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12 col-12 social">
                     <h4>STAY IN TOUCH</h4>
-                    <form class="form-inline justify-content-between" action="#" method="POST">
+                    <form class="form-inline" action="https://formspree.io/irinaboiko95@gmail.com" method="POST">
                         <div class="form-group">
-                            <label for="subscribe" class="sr-only"></label>
+                            <input type="hidden" name="subscribe-form" value="Оформление подписки">
                             <input class="form-control" id="subscribe" type="email" placeholder="Subscribe our newsletter">
                         </div>
                         <button class="send" type="submit"></button>
