@@ -409,6 +409,7 @@ h4 {
   color: rgba(47, 45, 53, 0.75);
 }
 
+/*header*/
 header {
   position: absolute;
   top: 0;
@@ -528,6 +529,7 @@ header .menu-mob .menu-btn > span::after {
     transition-duration: 0.25s;
   }
 }
+/*promo*/
 .promo {
   background: url("../img/background-promo.jpeg") center/cover no-repeat;
 }
@@ -641,6 +643,7 @@ header .menu-mob .menu-btn > span::after {
     padding: 0 20px;
   }
 }
+/*story*/
 .story {
   position: relative;
   background-color: #fff;
@@ -706,11 +709,13 @@ header .menu-mob .menu-btn > span::after {
     opacity: 0.2;
   }
 }
+/*video*/
 .video {
   background-image: url("../img/background-video.jpeg");
   height: 550px;
 }
 
+/*expertise*/
 .expertise {
   background-color: #fff;
 }
@@ -736,34 +741,34 @@ header .menu-mob .menu-btn > span::after {
   margin: 0 auto;
   margin-top: 22px;
 }
-.expertise .container .expertise-grid {
+.expertise .container .expertise-block {
   display: grid;
   grid-template: 250px 250px/1fr 1fr 1fr;
 }
-.expertise .container .expertise-grid div {
+.expertise .container .expertise-block div {
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
   padding: 30px 30px 0px;
 }
-.expertise .container .expertise-grid div:hover {
+.expertise .container .expertise-block div:hover {
   background-color: #ecf3f3;
 }
-.expertise .container .expertise-grid div:nth-child(-n+3) {
+.expertise .container .expertise-block div:nth-child(-n+3) {
   border-bottom: 1px solid #ebebeb;
 }
-.expertise .container .expertise-grid div:nth-child(1), .expertise .container .expertise-grid div:nth-child(2), .expertise .container .expertise-grid div:nth-child(4), .expertise .container .expertise-grid div:nth-child(5) {
+.expertise .container .expertise-block div:nth-child(1), .expertise .container .expertise-block div:nth-child(2), .expertise .container .expertise-block div:nth-child(4), .expertise .container .expertise-block div:nth-child(5) {
   border-right: 1px solid #ebebeb;
 }
-.expertise .container .expertise-grid img {
+.expertise .container .expertise-block img {
   margin-bottom: 30px;
 }
-.expertise .container .expertise-grid h4 {
+.expertise .container .expertise-block h4 {
   text-align: center;
   margin-bottom: 15px;
 }
-.expertise .container .expertise-grid p {
+.expertise .container .expertise-block p {
   color: #413d4b;
   text-align: center;
   line-height: 1.6;
@@ -771,17 +776,17 @@ header .menu-mob .menu-btn > span::after {
 }
 
 @media all and (max-width: 768px) {
-  .expertise .container .expertise-grid {
+  .expertise .container .expertise-block {
     display: grid;
     grid-template: 260px 260px 260px/1fr 1fr;
   }
-  .expertise .container .expertise-grid div:nth-child(3) {
+  .expertise .container .expertise-block div:nth-child(3) {
     border-right: 1px solid #ebebeb;
   }
-  .expertise .container .expertise-grid div:nth-child(4) {
+  .expertise .container .expertise-block div:nth-child(4) {
     border-bottom: 1px solid #ebebeb;
   }
-  .expertise .container .expertise-grid div:hover {
+  .expertise .container .expertise-block div:hover {
     background-color: transparent;
   }
 }
@@ -792,16 +797,16 @@ header .menu-mob .menu-btn > span::after {
   .expertise .container .caption {
     margin-bottom: 10px;
   }
-  .expertise .container .expertise-grid {
+  .expertise .container .expertise-block {
     display: grid;
     grid-template: 280px 280px 280px 280px 280px 280px/1fr;
     padding: 0 20px;
   }
-  .expertise .container .expertise-grid div:nth-child(-n+5) {
+  .expertise .container .expertise-block div:nth-child(-n+5) {
     border-right: none;
     border-bottom: 1px solid #ebebeb;
   }
-  .expertise .container .expertise-grid div:hover {
+  .expertise .container .expertise-block div:hover {
     background-color: transparent;
   }
 }
@@ -837,7 +842,7 @@ header .menu-mob .menu-btn > span::after {
   color: #fff;
   margin-bottom: 11px;
 }
-.team .container .team-grid {
+.team .container .team-block {
   display: grid;
   grid-template: 310px/1fr 1fr 1fr 1fr;
   grid-column-gap: 20px;
@@ -913,7 +918,7 @@ header .menu-mob .menu-btn > span::after {
   }
 }
 @media all and (max-width: 768px) {
-  .team .container .team-grid {
+  .team .container .team-block {
     display: grid;
     grid-template: 310px 310px/1fr 1fr;
     grid-gap: 20px;
@@ -923,12 +928,13 @@ header .menu-mob .menu-btn > span::after {
   }
 }
 @media all and (max-width: 576px) {
-  .team .container .team-grid {
+  .team .container .team-block {
     display: grid;
     grid-template: 310px 310px 310px 310px/1fr;
     grid-gap: 20px;
   }
 }
+/*works*/
 .works {
   box-sizing: border-box;
   padding: 65px 0 70px;
@@ -1018,6 +1024,7 @@ header .menu-mob .menu-btn > span::after {
     align-self: flex-end;
   }
 }
+/*hard slider*/
 .review {
   background: url("../img/background-review.jpeg") center/cover no-repeat;
 }
@@ -1096,7 +1103,98 @@ header .menu-mob .menu-btn > span::after {
 .review .container .slider-clients .slick-next:hover:before {
   content: url("../img/arrow-forward-hover.png");
 }
+.review .container .review-mob {
+  display: none;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.review .container .review-mob .review-block {
+  border: 1px solid #89819c;
+  color: #fff;
+  width: 85%;
+  padding: 0 15px 15px;
+  margin-bottom: 20px;
+}
+.review .container .review-mob .review-block .quote {
+  font-family: "PlayfairDisplayRegular";
+  font-size: 100px;
+  margin-top: -25px;
+}
+.review .container .review-mob .review-block .text-review {
+  font-family: "PlayfairDisplayRegular";
+  font-size: 16px;
+  line-height: 1.55;
+  letter-spacing: 0.35px;
+  margin-top: -70px;
+}
+.review .container .review-mob .review-block .client {
+  margin-top: 5px;
+}
+.review .container .review-mob .review-block h4 {
+  color: #fff;
+  text-transform: uppercase;
+}
+.review .container .review-mob .review-block .client-position {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.review .container .review-mob .review-block img {
+  width: 45px;
+  height: 45px;
+}
+.review .container .review-mob .review-block:nth-child(odd) {
+  align-self: flex-start;
+}
+.review .container .review-mob .review-block:nth-child(odd) .quote {
+  text-align: left;
+}
+.review .container .review-mob .review-block:nth-child(odd) .text-review {
+  text-align: left;
+}
+.review .container .review-mob .review-block:nth-child(odd) img {
+  float: left;
+  margin-right: 10px;
+}
+.review .container .review-mob .review-block:nth-child(odd) .clear {
+  clear: both;
+}
+.review .container .review-mob .review-block:nth-child(even) {
+  align-self: flex-end;
+}
+.review .container .review-mob .review-block:nth-child(even) .quote {
+  text-align: right;
+}
+.review .container .review-mob .review-block:nth-child(even) .text-review {
+  text-align: right;
+}
+.review .container .review-mob .review-block:nth-child(even) img {
+  float: right;
+  margin-left: 10px;
+}
+.review .container .review-mob .review-block:nth-child(even) h4 {
+  text-align: right;
+}
+.review .container .review-mob .review-block:nth-child(even) .client-position {
+  text-align: right;
+}
+.review .container .review-mob .review-block:nth-child(even) .clear {
+  clear: both;
+}
 
+@media all and (max-width: 768px) {
+  .review .container .slider-text-review, .review .container .slider-clients {
+    display: none;
+  }
+  .review .container .review-mob .review-block {
+    width: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  .review .container .review-mob {
+    display: flex;
+  }
+}
+/*form*/
 .form-and-clients .container {
   padding: 60px 0 40px;
 }
@@ -1179,6 +1277,7 @@ header .menu-mob .menu-btn > span::after {
     text-align: center;
   }
 }
+/*footer*/
 footer {
   background: url("../img/background-footer.jpeg") center/cover no-repeat;
   color: #fff;
@@ -1245,6 +1344,9 @@ footer .container .location .phone-number::before {
 }
 footer .container .social {
   padding-top: 18px;
+}
+footer .container .social .form-group {
+  margin: 0;
 }
 footer .container .social form {
   margin-bottom: 28px;
@@ -1348,6 +1450,29 @@ footer .container .social .youtube::after {
 footer .container .social address {
   text-transform: capitalize;
   text-align: right;
+}
+
+@media all and (max-width: 992px) {
+  footer .container .contact {
+    margin-bottom: 40px;
+  }
+  footer .container .contact p {
+    margin-bottom: 40px;
+  }
+  footer .container .location {
+    margin-bottom: 40px;
+  }
+  footer .container .social address {
+    text-align: left;
+  }
+}
+@media all and (max-width: 350px) {
+  footer .container .social form input {
+    width: 180px;
+  }
+  footer .container .social form .send {
+    width: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
