@@ -1,20 +1,20 @@
-$(document).ready(function(){
-  $("#menu-desktop").on("click","a", function (event) {
-      event.preventDefault();
-      let id  = $(this).attr('href'),
-          top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top}, 1500);
-  });
+/*scroll menu*/
+
+$("#menu-desktop").on("click","a", function (event) {
+  event.preventDefault();
+    let id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
 });
 
-$(document).ready(function(){
-  $("#menu-mob").on("click","a", function (event) {
-      event.preventDefault();
-      let id  = $(this).attr('href'),
-          top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top}, 1500);
-  });
+$("#menu-mob").on("click","a", function (event) {
+  event.preventDefault();
+  let id  = $(this).attr('href'),
+      top = $(id).offset().top;
+  $('body,html').animate({scrollTop: top}, 1500);
 });
+
+/*slider promo*/
 
 $(document).ready(function(){
     $('.slider-promo').slick({
@@ -28,23 +28,48 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(function(){
-  $('.slider-text-review').slick({
+/*slider team*/
+
+$('.team-slider').slick({
+  infinite: false,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      }
+    }
+  ]
+});
+
+/*slider review*/
+
+$('.slider-text-review').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: true,
     draggable: false,
-  //  asNavFor: '.slider-clients',
-  });
 });
-$(document).ready(function(){
-  $('.slider-clients').slick({
+$('.slider-clients').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
-    //centerPadding: '60px',
+    centerPadding: '59px',
     asNavFor: '.slider-text-review',
-  });
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          centerPadding: '65px',
+        }
+      }
+    ]
 });
