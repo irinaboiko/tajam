@@ -1198,15 +1198,18 @@ header .menu-mob .menu-btn > span::after {
 .form-and-clients .container {
   padding: 60px 0 40px;
 }
-.form-and-clients .container .form h3 {
+.form-and-clients .container .form-block {
+  margin: 0;
+}
+.form-and-clients .container .form-block .form h3 {
   text-align: left;
   margin-bottom: 30px;
 }
-.form-and-clients .container .form .form-group {
+.form-and-clients .container .form-block .form .form-group {
   height: 45px;
   margin-bottom: 25px;
 }
-.form-and-clients .container .form input {
+.form-and-clients .container .form-block .form input {
   font-family: "RobotoLight";
   font-size: 14px;
   color: #413d4b;
@@ -1215,16 +1218,16 @@ header .menu-mob .menu-btn > span::after {
   height: 100%;
   padding: 5px 20px;
 }
-.form-and-clients .container .form ::placeholder {
+.form-and-clients .container .form-block .form ::placeholder {
   font-family: "RobotoLight";
   font-size: 14px;
   color: #413d4b;
 }
-.form-and-clients .container .form .textarea {
+.form-and-clients .container .form-block .form .textarea {
   height: 200px;
   margin-bottom: 15px;
 }
-.form-and-clients .container .form textarea {
+.form-and-clients .container .form-block .form textarea {
   font-family: "RobotoLight";
   font-size: 14px;
   color: #413d4b;
@@ -1234,7 +1237,7 @@ header .menu-mob .menu-btn > span::after {
   height: 100%;
   padding: 10px 20px;
 }
-.form-and-clients .container .form button {
+.form-and-clients .container .form-block .form button {
   font-family: "HammersmithOneRegular";
   font-size: 16px;
   color: #00e0d0;
@@ -1249,20 +1252,20 @@ header .menu-mob .menu-btn > span::after {
   border-radius: 2px;
   background: transparent;
 }
-.form-and-clients .container .form button:hover {
+.form-and-clients .container .form-block .form button:hover {
   box-shadow: 0 0 10px #2ab6b1;
 }
-.form-and-clients .container .clients {
+.form-and-clients .container .form-block .clients {
   padding: 0 10px;
 }
-.form-and-clients .container .clients h3 {
+.form-and-clients .container .form-block .clients h3 {
   text-align: left;
   margin-bottom: 45px;
 }
-.form-and-clients .container .clients div {
+.form-and-clients .container .form-block .clients div {
   padding-bottom: 45px;
 }
-.form-and-clients .container .clients img {
+.form-and-clients .container .form-block .clients img {
   height: 100%;
 }
 
