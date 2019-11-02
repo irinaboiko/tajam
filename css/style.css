@@ -1262,10 +1262,11 @@ header .menu-mob .menu-btn > span::after {
   text-align: left;
   margin-bottom: 45px;
 }
-.form-and-clients .container .form-block .clients div {
+.form-and-clients .container .form-block .clients .clients-logo {
+  margin: 0;
   padding-bottom: 45px;
 }
-.form-and-clients .container .form-block .clients img {
+.form-and-clients .container .form-block .clients .clients-logo img {
   height: 100%;
 }
 
