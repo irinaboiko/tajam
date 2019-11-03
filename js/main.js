@@ -38,12 +38,21 @@ $('.team-slider').slick({
     {
       breakpoint: 1000,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        arrows: true,
+      }
+    },
+    {
+      breakpoint: 576,
+      settings: {
+        slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true,
+        arrows: true,
       }
-    }
+    },
   ]
 });
 

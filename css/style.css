@@ -846,6 +846,7 @@ header .menu-mob .menu-btn > span::after {
   margin-bottom: 11px;
 }
 .team .container .team-slider {
+  width: 960px;
   margin-bottom: 65px;
 }
 .team .container .team-slider .team-member-slide {
@@ -904,6 +905,16 @@ header .menu-mob .menu-btn > span::after {
   box-shadow: 0 0 10px #2ab6b1;
 }
 
+@media all and (max-width: 1000px) {
+  .team .container .team-slider {
+    width: 480px;
+  }
+}
+@media all and (max-width: 576px) {
+  .team .container .team-slider {
+    width: 240px;
+  }
+}
 /*works*/
 .works {
   padding: 65px 0 70px;
