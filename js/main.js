@@ -28,6 +28,105 @@ $(document).ready(function(){
     });
 });
 
+/*video*/
+
+
+let video = document.querySelector('#video');
+let buttonPlayMain = document.querySelector('#play-main');
+let controls = document.querySelector('#controls');
+let videoVolume = document.querySelector('#volume');
+
+
+
+buttonPlayMain.addEventListener('click', function () {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+  if (video.play) {
+    buttonPlayMain.classList.toggle('button-main-hidden');
+    controls.classList.toggle('show-controls');
+  }
+});
+
+videoVolume.addEventListener('click', function () {
+  let v = this.value;
+  console.log(v);
+  video.volume = v / 100;
+});
+
+
+
+/*
+let videoPlayer = function () {
+  let video = document.querySelector('#video');
+  let buttonPlayMain = document.querySelector('#play-main');
+  let controls = document.querySelector('#controls');
+
+
+  buttonPlayMain.addEventListener('click', function () {
+    if (video.paused == true) {
+      video.play();
+      buttonPlayMain.classList.add('hide-btn');
+      controls.classList.add('show-controls');
+
+    }
+
+  });
+}*/
+
+
+/*
+
+document.querySelector('#play').onclick = play;
+document.querySelector('#pause').onclick = pause;
+document.querySelector('#stop').onclick = stop;
+document.querySelector('#volume').oninput = videoVolume;
+
+let video;
+let display;
+let progress;
+
+video = document.querySelector('#video-player');
+progress = document.querySelector('#progress');
+
+video.ontimeupdate = progressUpdate;
+progress.onclick = videoRewind;
+
+function play(){
+  video.play();
+}
+function pause(){
+  video.pause();
+}
+function stop(){
+  video.pause();
+  video.currentTime = 0;
+}
+function videoVolume(){
+  let v = this.value;
+  console.log(v);
+  video.volume = v / 100;
+}
+function progressUpdate(){
+  console.log(video.duration);
+  console.log(video.currentTime);
+  let d = video.duration;
+  let c = video.currentTime;
+  progress.value = c / d * 100;
+}
+function videoRewind(){
+  let w = this.offsetWidth;
+  let o = event.offsetX;
+  console.log(w);
+  console.log(o);
+  this.value = o / w * 100;
+  video.pause();
+  video.currentTime = video.duration * (o / w);
+  video.play();
+}*/
+
 /*slider team*/
 
 $('.team-slider').slick({

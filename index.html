@@ -24,7 +24,7 @@
                     <li><a href="#team">TEAMS</a></li>
                     <li><a href="#works">WORKS</a></li>
                     <li><a href="#review">PEOPLE SAY</a></li>
-                    <li><a href="contact">CONTACT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
             
@@ -41,7 +41,7 @@
                         <li><a class="menu-item" href="#team">TEAMS</a></li>
                         <li><a class="menu-item" href="#works">WORKS</a></li>
                         <li><a class="menu-item" href="#review">PEOPLE SAY</a></li>
-                        <li><a class="menu-item" href="contact">CONTACT</a></li>
+                        <li><a class="menu-item" href="#contact">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
@@ -98,7 +98,24 @@
         </section>
 
         <section class="video">
-
+            <video loop poster="./img/background-video.jpeg" id="video">
+                <source src="./img/video-promo.mp4" type="video/mp4">
+            </video>
+            <button class="play-main" id="play-main"></button>
+            <div class="controls" id="controls">
+                <progress id="progress" max="100" value="0"></progress>
+                <button class="pause" id="pause">
+                    <img class="pause-img" src="./img/icon-pause.png">
+                    <img class="play-img" src="./img/icon-play.png">
+                </button>
+                <button class="stop" id="stop" min=0 max=100>
+                    <img src="./img/icon-stop.png">
+                </button>
+                <div class="mute">
+                    <img src="./img/icon-mute-on.png">
+                    <input type="range" id="volume">
+                </div>
+            </div>
         </section>
 
         <section class="expertise" id="expertise">
@@ -317,34 +334,34 @@
                 </div>
                 <div class="slider-clients">
                     <div class="slide-client">
-                        <img src="./img/portret-1.png" alt="client-image">
+                        <img src="./img/portret-1.jpg" alt="client-image">
                     </div>
                     <div class="slide-client">
-                        <img src="./img/portret-2.png" alt="client-image">
+                        <img src="./img/portret-2.jpg" alt="client-image">
                     </div>
                     <div class="slide-client">
-                        <img src="./img/portret-3.png" alt="client-image">
+                        <img src="./img/portret-3.jpg" alt="client-image">
                     </div>
                     <div class="slide-client">
-                        <img src="./img/portret-4.png" alt="client-image">
+                        <img src="./img/portret-4.jpg" alt="client-image">
                     </div>
                     <div class="slide-client">
-                        <img src="./img/portret-5.png" alt="client-image">
+                        <img src="./img/portret-5.jpg" alt="client-image">
                     </div>
                     <div class="slide-client">
-                        <img src="./img/portret-1.png" alt="client-image">
+                        <img src="./img/portret-1.jpg" alt="client-image">
                     </div>
                     <div class="slide-client">
-                        <img src="./img/portret-2.png" alt="client-image">
+                        <img src="./img/portret-2.jpg" alt="client-image">
                     </div>
                     <div class="slide-client">
-                        <img src="./img/portret-3.png" alt="client-image">
+                        <img src="./img/portret-3.jpg" alt="client-image">
                     </div>
                     <div class="slide-client">
-                        <img src="./img/portret-4.png" alt="client-image">
+                        <img src="./img/portret-4.jpg" alt="client-image">
                     </div>
                     <div class="slide-client">
-                        <img src="./img/portret-5.png" alt="client-image">
+                        <img src="./img/portret-5.jpg" alt="client-image">
                     </div>
                 </div>
             </div>
