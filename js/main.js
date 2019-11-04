@@ -30,24 +30,82 @@ $(document).ready(function(){
 
 /*video*/
 
+let video = document.getElementById('video');
+let progress = document.querySelector('.progress');
+let buttonPlayMain = document.querySelector('.btn-play-main');
+let btnPlayPause = document.getElementById('play-pause');
+let mute = document.getElementById('mute');
 
+
+buttonPlayMain.addEventListener('click', function () {
+  if(video.paused) {
+    video.play();
+    buttonPlayMain.classList.add('button-main-hidden');
+  }
+});
+
+btnPlayPause.addEventListener('click', function() {
+  if(video.paused) {
+    btnPlayPause.classList.remove('play');
+    btnPlayPause.classList.add('pause');
+    buttonPlayMain.classList.add('button-main-hidden');
+    video.play();
+  } else {
+    btnPlayPause.classList.remove('pause');
+    btnPlayPause.classList.add('play');
+    buttonPlayMain.classList.remove('button-main-hidden');
+    video.pause();
+  }
+});
+
+video.addEventListener('timeupdate', function() {
+  let progressPosition = video.currentTime / video.duration;
+  progress.style.width = progressPosition * 100 + "%";
+});
+
+mute.addEventListener('click', function () {
+  if (video.muted == false) {
+      video.muted = true;
+  } else {
+      video.muted = false;
+  }
+});
+
+
+
+
+
+/*
 let video = document.querySelector('#video');
 let buttonPlayMain = document.querySelector('#play-main');
 let controls = document.querySelector('#controls');
 let videoVolume = document.querySelector('#volume');
-
-
-
+let pauseVideo = document.querySelector('#pause');
+let stopVideo = document.querySelector('#stop');*/
+/*
 buttonPlayMain.addEventListener('click', function () {
   if (video.paused) {
     video.play();
   } else {
     video.pause();
   }
-  if (video.play) {
-    buttonPlayMain.classList.toggle('button-main-hidden');
-    controls.classList.toggle('show-controls');
+  if (video.paused == false) {
+    buttonPlayMain.classList.add('button-main-hidden');
+    //controls.classList.toggle('show-controls');
   }
+});
+
+pauseVideo.addEventListener('click', function () {
+  if (video.paused) {
+    video.play();
+  } else {
+    video.pause();
+  }
+});
+
+stopVideo.addEventListener('click', function () {
+  video.pause();
+  video.currentTime = 0;
 });
 
 videoVolume.addEventListener('click', function () {

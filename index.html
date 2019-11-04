@@ -98,16 +98,25 @@
         </section>
 
         <section class="video">
-            <video loop poster="./img/background-video.jpeg" id="video">
-                <source src="./img/video-promo.mp4" type="video/mp4">
-            </video>
-            <button class="play-main" id="play-main"></button>
+            <div class="c-video">
+                <video id="video" poster="./img/background-video.jpeg">
+                    <source src="./img/video-promo.mp4" type="video/mp4">
+                </video>
+                <div class="controls">
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                    <div class="buttons">
+                        <button id="play-pause" class="play-pause"></button>
+                        <button id="mute" class="mute"></button>
+                    </div>
+                </div>
+                <button class="btn-play-main"></button>
+            </div>
+            
+            
+            <!--
             <div class="controls" id="controls">
-                <progress id="progress" max="100" value="0"></progress>
-                <button class="pause" id="pause">
-                    <img class="pause-img" src="./img/icon-pause.png">
-                    <img class="play-img" src="./img/icon-play.png">
-                </button>
                 <button class="stop" id="stop" min=0 max=100>
                     <img src="./img/icon-stop.png">
                 </button>
@@ -115,7 +124,7 @@
                     <img src="./img/icon-mute-on.png">
                     <input type="range" id="volume">
                 </div>
-            </div>
+            </div>-->
         </section>
 
         <section class="expertise" id="expertise">

@@ -713,26 +713,101 @@ header .menu-mob .menu-btn > span::after {
 .video {
   background-image: url("../img/background-video.jpeg");
   height: 550px;
+  overflow: hidden;
   position: relative;
 }
-.video video {
+.video .c-video {
+  width: 100%;
+}
+.video .c-video:hover .controls {
+  transform: translateY(0);
+}
+.video .c-video video {
   width: 100%;
   height: 550px;
   object-fit: cover;
 }
-.video .play-main {
+.video .c-video .controls {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translateY(100%) translateY(-3px);
+  transition: all 0.5s;
+}
+.video .c-video .controls .buttons {
+  padding: 10px;
+}
+.video .c-video .controls .buttons .play-pause {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.video .c-video .controls .buttons .play-pause::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 23px;
+  background: url("../img/icon-play.png") center/cover no-repeat;
+}
+.video .c-video .controls .buttons .play::before {
+  content: "";
+  background: url("../img/icon-play.png") center/cover no-repeat;
+}
+.video .c-video .controls .buttons .pause::before {
+  content: "";
+  background: url("../img/icon-pause.png") center/cover no-repeat;
+}
+.video .c-video .controls .buttons .mute {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.video .c-video .controls .buttons .mute::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url("../img/icon-mute-on.png") center/cover no-repeat;
+}
+.video .c-video .controls .buttons .mute-on::before {
+  content: "";
+  background: url("../img/icon-mute-on.png") center/cover no-repeat;
+}
+.video .c-video .controls .buttons .mute-of::before {
+  content: "";
+  background: url("../img/icon-mute-off.png") center/cover no-repeat;
+}
+.video .c-video .controls .progress-bar {
+  height: 3px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+}
+.video .c-video .controls .progress-bar .progress {
+  height: 3px;
+  background-color: #2ab6b1;
+}
+.video .c-video .btn-play-main {
   width: 100px;
   height: 100px;
   border: 3px solid #fff;
   border-radius: 50%;
   background-color: transparent;
   box-shadow: 0 0 10px #000;
+  opacity: 1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.video .play-main::after {
+.video .c-video .btn-play-main::after {
   content: "";
   width: 37px;
   height: 45px;
@@ -742,70 +817,17 @@ header .menu-mob .menu-btn > span::after {
   transform: translate(-15px, -50%);
   background: url("../img/play.png") center/cover no-repeat;
 }
-.video .play-main:hover {
+.video .c-video .btn-play-main:hover {
   border: 3px solid #00e0d0;
   box-shadow: 0 0 10px #2ab6b1;
   cursor: pointer;
 }
-.video .play-main:hover::after {
+.video .c-video .btn-play-main:hover::after {
   background: url("../img/play-hover.png") center/cover no-repeat;
 }
-.video .button-main-hidden {
-  display: none;
-}
-.video .controls {
-  width: 100%;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.1);
-  position: absolute;
-  left: 0;
-  bottom: -100%;
-}
-.video .controls progress {
-  width: 100%;
-  height: 5px;
-  position: absolute;
-  left: 0;
-  bottom: 45px;
-}
-.video .controls .pause {
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-}
-.video .controls .pause img {
-  width: 20px;
-  height: 23px;
-}
-.video .controls .stop {
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  left: 60px;
-  bottom: 10px;
-}
-.video .controls .stop img {
-  width: 20px;
-  height: 23px;
-}
-.video .controls .mute {
-  position: absolute;
-  left: 100px;
-  bottom: 10px;
-}
-.video .controls .mute img {
-  width: 20px;
-  height: 23px;
-}
-.video .controls .mute input {
-  position: absolute;
-  left: 30px;
-  bottom: 1px;
-}
-.video .show-controls {
-  bottom: 0;
+.video .c-video .button-main-hidden {
+  opacity: 0;
+  height: 0;
 }
 
 /*expertise*/
