@@ -19,7 +19,7 @@ $("#menu-mob").on("click","a", function (event) {
 $(document).ready(function(){
     $('.slider-promo').slick({
         dots: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
         speed: 1500,
         arrows: false,
@@ -31,7 +31,6 @@ $(document).ready(function(){
 /*video*/
 
 let video = document.getElementById('video');
-//let progress = document.querySelector('.progress');
 let buttonPlayMain = document.querySelector('.btn-play-main');
 let btnPlayPause = document.getElementById('play-pause');
 let stopBtn = document.getElementById('stop');
