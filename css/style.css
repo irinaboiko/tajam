@@ -716,98 +716,113 @@ header .menu-mob .menu-btn > span::after {
   overflow: hidden;
   position: relative;
 }
-.video .c-video {
-  width: 100%;
-}
-.video .c-video:hover .controls {
+.video:hover .controls {
   transform: translateY(0);
 }
-.video .c-video video {
+.video video {
   width: 100%;
   height: 550px;
   object-fit: cover;
 }
-.video .c-video .controls {
-  display: flex;
-  flex-wrap: wrap;
+.video .controls {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 45px;
   background-color: rgba(0, 0, 0, 0.3);
   transform: translateY(100%) translateY(-3px);
   transition: all 0.5s;
 }
-.video .c-video .controls .buttons {
+.video .controls progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  color: #2ab6b1;
+  background-color: #000;
+}
+.video .controls progress::-moz-progress-bar {
+  color: #2ab6b1;
+  background-color: #000;
+}
+.video .controls progress::-webkit-progress-bar {
+  color: #2ab6b1;
+  background-color: #000;
+}
+.video .controls .buttons {
   padding: 10px;
 }
-.video .c-video .controls .buttons .play-pause {
+.video .controls .buttons .play-pause {
   background: none;
   border: 0;
   outline: 0;
   cursor: pointer;
 }
-.video .c-video .controls .buttons .play-pause::before {
+.video .controls .buttons .play-pause::before {
   content: "";
   display: inline-block;
   width: 18px;
   height: 23px;
   background: url("../img/icon-play.png") center/cover no-repeat;
 }
-.video .c-video .controls .buttons .play::before {
+.video .controls .buttons .play::before {
   content: "";
   background: url("../img/icon-play.png") center/cover no-repeat;
 }
-.video .c-video .controls .buttons .pause::before {
+.video .controls .buttons .pause::before {
   content: "";
   background: url("../img/icon-pause.png") center/cover no-repeat;
 }
-.video .c-video .controls .buttons .mute {
+.video .controls .buttons .stop {
   background: none;
   border: 0;
   outline: 0;
   cursor: pointer;
 }
-.video .c-video .controls .buttons .mute::before {
+.video .controls .buttons .stop::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 23px;
+  background: url("../img/icon-stop.png") center/cover no-repeat;
+}
+.video .controls .buttons .mute {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+.video .controls .buttons .mute::before {
   content: "";
   display: inline-block;
   width: 23px;
   height: 23px;
   background: url("../img/icon-mute-on.png") center/cover no-repeat;
 }
-.video .c-video .controls .buttons .mute-on::before {
+.video .controls .buttons .mute-on::before {
   content: "";
   background: url("../img/icon-mute-on.png") center/cover no-repeat;
 }
-.video .c-video .controls .buttons .mute-of::before {
+.video .controls .buttons .mute-off::before {
   content: "";
   background: url("../img/icon-mute-off.png") center/cover no-repeat;
 }
-.video .c-video .controls .progress-bar {
-  height: 3px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #000;
-}
-.video .c-video .controls .progress-bar .progress {
-  height: 3px;
-  background-color: #2ab6b1;
-}
-.video .c-video .btn-play-main {
+.video .btn-play-main {
   width: 100px;
   height: 100px;
   border: 3px solid #fff;
   border-radius: 50%;
   background-color: transparent;
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 3px #000;
   opacity: 1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.video .c-video .btn-play-main::after {
+.video .btn-play-main::after {
   content: "";
   width: 37px;
   height: 45px;
@@ -817,19 +832,27 @@ header .menu-mob .menu-btn > span::after {
   transform: translate(-15px, -50%);
   background: url("../img/play.png") center/cover no-repeat;
 }
-.video .c-video .btn-play-main:hover {
+.video .btn-play-main:hover {
   border: 3px solid #00e0d0;
-  box-shadow: 0 0 10px #2ab6b1;
+  box-shadow: 0 0 3px #2ab6b1;
   cursor: pointer;
 }
-.video .c-video .btn-play-main:hover::after {
+.video .btn-play-main:hover::after {
   background: url("../img/play-hover.png") center/cover no-repeat;
 }
-.video .c-video .button-main-hidden {
+.video .button-main-hidden {
   opacity: 0;
   height: 0;
 }
 
+@media all and (max-width: 768px) {
+  .video video {
+    width: 100%;
+    max-height: 550px;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 /*expertise*/
 .expertise {
   background-color: #fff;

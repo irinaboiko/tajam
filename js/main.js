@@ -31,10 +31,12 @@ $(document).ready(function(){
 /*video*/
 
 let video = document.getElementById('video');
-let progress = document.querySelector('.progress');
+//let progress = document.querySelector('.progress');
 let buttonPlayMain = document.querySelector('.btn-play-main');
 let btnPlayPause = document.getElementById('play-pause');
-let mute = document.getElementById('mute');
+let stopBtn = document.getElementById('stop');
+let muteBtn = document.getElementById('mute');
+let progress = document.querySelector('#progress');
 
 
 buttonPlayMain.addEventListener('click', function () {
@@ -58,123 +60,35 @@ btnPlayPause.addEventListener('click', function() {
   }
 });
 
-video.addEventListener('timeupdate', function() {
-  let progressPosition = video.currentTime / video.duration;
-  progress.style.width = progressPosition * 100 + "%";
+stopBtn.addEventListener('click', function() {
+  video.pause();
+  video.currentTime = 0;
 });
 
-mute.addEventListener('click', function () {
+muteBtn.addEventListener('click', function () {
   if (video.muted == false) {
+      muteBtn.classList.remove('mute-on');
+      muteBtn.classList.add('mute-off');
       video.muted = true;
   } else {
+    muteBtn.classList.remove('mute-off');
+    muteBtn.classList.add('mute-on');
       video.muted = false;
   }
 });
 
-
-
-
-
-/*
-let video = document.querySelector('#video');
-let buttonPlayMain = document.querySelector('#play-main');
-let controls = document.querySelector('#controls');
-let videoVolume = document.querySelector('#volume');
-let pauseVideo = document.querySelector('#pause');
-let stopVideo = document.querySelector('#stop');*/
-/*
-buttonPlayMain.addEventListener('click', function () {
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
-  if (video.paused == false) {
-    buttonPlayMain.classList.add('button-main-hidden');
-    //controls.classList.toggle('show-controls');
-  }
-});
-
-pauseVideo.addEventListener('click', function () {
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
-});
-
-stopVideo.addEventListener('click', function () {
-  video.pause();
-  video.currentTime = 0;
-});
-
-videoVolume.addEventListener('click', function () {
-  let v = this.value;
-  console.log(v);
-  video.volume = v / 100;
-});
-
-
-
-/*
-let videoPlayer = function () {
-  let video = document.querySelector('#video');
-  let buttonPlayMain = document.querySelector('#play-main');
-  let controls = document.querySelector('#controls');
-
-
-  buttonPlayMain.addEventListener('click', function () {
-    if (video.paused == true) {
-      video.play();
-      buttonPlayMain.classList.add('hide-btn');
-      controls.classList.add('show-controls');
-
-    }
-
-  });
-}*/
-
-
-/*
-
-document.querySelector('#play').onclick = play;
-document.querySelector('#pause').onclick = pause;
-document.querySelector('#stop').onclick = stop;
-document.querySelector('#volume').oninput = videoVolume;
-
-let video;
-let display;
-let progress;
-
-video = document.querySelector('#video-player');
-progress = document.querySelector('#progress');
-
 video.ontimeupdate = progressUpdate;
 progress.onclick = videoRewind;
 
-function play(){
-  video.play();
-}
-function pause(){
-  video.pause();
-}
-function stop(){
-  video.pause();
-  video.currentTime = 0;
-}
-function videoVolume(){
-  let v = this.value;
-  console.log(v);
-  video.volume = v / 100;
-}
-function progressUpdate(){
+function progressUpdate() {
   console.log(video.duration);
   console.log(video.currentTime);
   let d = video.duration;
   let c = video.currentTime;
   progress.value = c / d * 100;
 }
-function videoRewind(){
+
+function videoRewind() {
   let w = this.offsetWidth;
   let o = event.offsetX;
   console.log(w);
@@ -183,7 +97,7 @@ function videoRewind(){
   video.pause();
   video.currentTime = video.duration * (o / w);
   video.play();
-}*/
+}
 
 /*slider team*/
 
