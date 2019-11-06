@@ -4,15 +4,44 @@ $("#menu-desktop").on("click","a", function (event) {
   event.preventDefault();
     let id  = $(this).attr('href'),
         top = $(id).offset().top;
-    $('body,html').animate({scrollTop: top}, 1500);
+    $('body,html').animate({scrollTop: top}, 900);
 });
 
-$("#menu-mob").on("click","a", function (event) {
+$("#menu-mob").on("click", "a", function (event) {
   event.preventDefault();
   let id  = $(this).attr('href'),
       top = $(id).offset().top;
-  $('body,html').animate({scrollTop: top}, 1500);
+  $('body,html').animate({scrollTop: top}, 900);
 });
+
+/*mobile menu*/
+
+let menuBtn = document.querySelector('.menu-btn');
+let menuLines = document.querySelector('.menu-btn-lines');
+let menuMobBox = document.querySelector('.menu-box');
+let menuItem = document.querySelector('.menu-item');
+
+menuBtn.addEventListener('click', function() {
+  menuLines.classList.toggle("menu-btn-active");
+  menuMobBox.classList.toggle("menu-show");
+});
+
+/*
+$(".menu-item").on("click", "a", function (event) {
+  event.preventDefault();
+  let id = $(this).attr('href'),
+      top = $(id).offset().top;
+  $(".menu-box").removeClass("menu-show");
+  $(".menu-btn-lines").removeClass("menu-btn-active");
+});*/
+
+
+menuItem.addEventListener('click', function() {
+  menuLines.classList.remove("menu-btn-active");
+  menuMobBox.classList.remove("menu-show");
+});
+
+
 
 /*slider promo*/
 
