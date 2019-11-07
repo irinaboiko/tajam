@@ -19,29 +19,19 @@ $("#menu-mob").on("click", "a", function (event) {
 let menuBtn = document.querySelector('.menu-btn');
 let menuLines = document.querySelector('.menu-btn-lines');
 let menuMobBox = document.querySelector('.menu-box');
-let menuItem = document.querySelector('.menu-item');
+let menuItem = document.querySelectorAll('.menu-item');
 
 menuBtn.addEventListener('click', function() {
   menuLines.classList.toggle("menu-btn-active");
   menuMobBox.classList.toggle("menu-show");
 });
 
-/*
-$(".menu-item").on("click", "a", function (event) {
-  event.preventDefault();
-  let id = $(this).attr('href'),
-      top = $(id).offset().top;
-  $(".menu-box").removeClass("menu-show");
-  $(".menu-btn-lines").removeClass("menu-btn-active");
-});*/
-
-
-menuItem.addEventListener('click', function() {
-  menuLines.classList.remove("menu-btn-active");
+menuItem.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    menuLines.classList.remove("menu-btn-active");
   menuMobBox.classList.remove("menu-show");
+  });
 });
-
-
 
 /*slider promo*/
 
