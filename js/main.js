@@ -3,14 +3,14 @@
 $("#menu-desktop").on("click","a", function (event) {
   event.preventDefault();
     let id  = $(this).attr('href'),
-        top = $(id).offset().top;
+        top = $(id).offset().top - 75 + 'px';
     $('body,html').animate({scrollTop: top}, 900);
 });
 
 $("#menu-mob").on("click", "a", function (event) {
   event.preventDefault();
   let id  = $(this).attr('href'),
-      top = $(id).offset().top;
+      top = $(id).offset().top - 75 + 'px';
   $('body,html').animate({scrollTop: top}, 900);
 });
 
@@ -29,9 +29,36 @@ menuBtn.addEventListener('click', function() {
 menuItem.forEach(function(btn) {
   btn.addEventListener('click', function() {
     menuLines.classList.remove("menu-btn-active");
-  menuMobBox.classList.remove("menu-show");
+    menuMobBox.classList.remove("menu-show");
   });
 });
+
+/*fix header*/
+
+let header = document.querySelector('.header');
+
+window.onscroll = function(){
+  if(document.documentElement.scrollTop > 590){
+    header.classList.add("header-fixed");
+  }
+  else{
+    header.classList.remove("header-fixed");
+  }
+}
+/*
+$(window).scroll(function(){
+  let $sections = $('section');
+  $sections.each(function(i,el){
+    let top  = $(el).offset().top-100;
+    let bottom = top +$(el).height();
+    let scroll = $(window).scrollTop();
+    let id = $(el).attr('id');
+    if( scroll > top && scroll < bottom){
+      $('a.menu-item-active').removeClass('menu-item-active');
+      $('a[href="#'+id+'"]').addClass('menu-item-active');
+    }
+  })
+});*/
 
 /*slider promo*/
 

@@ -517,6 +517,15 @@ header .container ul a:focus {
   outline: none;
   color: #00e0d0;
 }
+header .container ul .menu-item-active {
+  color: #00e0d0;
+}
+
+.header-fixed {
+  position: fixed;
+  background-color: #3a2f5e;
+  z-index: 100;
+}
 
 @media all and (max-width: 768px) {
   header .menu-desktop {
