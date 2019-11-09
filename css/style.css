@@ -837,17 +837,30 @@ header .container ul .menu-item-active {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
 }
 .video .btn-play-main::after {
   content: "";
-  width: 37px;
-  height: 45px;
+  width: 47px;
+  height: 55px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-15px, -50%);
+  transform: translate(-45%, -50%);
   background: url("../img/play.png") center/cover no-repeat;
+}
+.video .btn-play-main::before {
+  content: "WATCH OUR STORY";
+  font-family: "RobotoBlack";
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1.1px;
+  width: 180px;
+  position: absolute;
+  top: 145%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .video .btn-play-main:hover {
   border: 3px solid #00e0d0;
@@ -856,6 +869,9 @@ header .container ul .menu-item-active {
 }
 .video .btn-play-main:hover::after {
   background: url("../img/play-hover.png") center/cover no-repeat;
+}
+.video .btn-play-main:hover::before {
+  color: #00e0d0;
 }
 .video .btn-play-main:focus {
   outline: none;
@@ -1160,28 +1176,29 @@ header .container ul .menu-item-active {
 .works .container a:hover::after {
   content: url("../img/arrow-works-hover.png");
 }
-.works .container-fluid {
+.works .gallery {
   margin-bottom: 75px;
+  display: grid;
+  grid-template: repeat(2, 1fr)/repeat(6, 1fr);
 }
-.works .container-fluid .thumb {
+.works .gallery .picture {
   background-color: #1abc9c;
   padding: 0;
 }
-.works .container-fluid .thumb a {
-  width: 100%;
+.works .gallery .picture a {
   height: 200px;
   overflow: hidden;
 }
-.works .container-fluid .thumb a:focus {
+.works .gallery .picture a:focus {
   outline-color: #2ab6b1;
 }
-.works .container-fluid .thumb img {
+.works .gallery .picture img {
   opacity: 1;
   transition: 0.3s ease-in-out;
   width: 100%;
   height: 100%;
 }
-.works .container-fluid .thumb img:hover {
+.works .gallery .picture img:hover {
   opacity: 0.5;
   cursor: zoom-in;
 }
@@ -1210,6 +1227,12 @@ header .container ul .menu-item-active {
   box-shadow: 0 0 10px #2ab6b1;
 }
 
+@media all and (max-width: 1024px) {
+  .works .gallery {
+    grid-template: repeat(3, 1fr)/repeat(4, 1fr);
+    margin-bottom: 40px;
+  }
+}
 @media all and (max-width: 768px) {
   .works {
     padding: 40px 0;
@@ -1217,7 +1240,8 @@ header .container ul .menu-item-active {
   .works .container {
     margin-bottom: 40px;
   }
-  .works .container-fluid {
+  .works .gallery {
+    grid-template: repeat(4, 1fr)/repeat(3, 1fr);
     margin-bottom: 40px;
   }
 }
@@ -1231,6 +1255,9 @@ header .container ul .menu-item-active {
   }
   .works .container a {
     align-self: flex-end;
+  }
+  .works .gallery {
+    grid-template: repeat(6, 1fr)/repeat(2, 1fr);
   }
 }
 /*review slider*/
