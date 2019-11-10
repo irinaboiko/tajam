@@ -45,20 +45,6 @@ window.onscroll = function(){
     header.classList.remove("header-fixed");
   }
 }
-/*
-$(window).scroll(function(){
-  let $sections = $('section');
-  $sections.each(function(i,el){
-    let top  = $(el).offset().top-100;
-    let bottom = top +$(el).height();
-    let scroll = $(window).scrollTop();
-    let id = $(el).attr('id');
-    if( scroll > top && scroll < bottom){
-      $('a.menu-item-active').removeClass('menu-item-active');
-      $('a[href="#'+id+'"]').addClass('menu-item-active');
-    }
-  })
-});*/
 
 /*slider promo*/
 
@@ -82,7 +68,6 @@ let btnPlayPause = document.getElementById('play-pause');
 let stopBtn = document.getElementById('stop');
 let muteBtn = document.getElementById('mute');
 let progress = document.querySelector('#progress');
-
 
 buttonPlayMain.addEventListener('click', function () {
   if(video.paused) {
