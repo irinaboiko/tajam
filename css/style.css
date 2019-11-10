@@ -1241,19 +1241,31 @@ header .menu-mob .menu-item {
 .works .gallery .picture a {
   height: 200px;
   overflow: hidden;
+  position: relative;
 }
 .works .gallery .picture a:focus {
   outline-color: #2ab6b1;
 }
-.works .gallery .picture img {
+.works .gallery .picture a img {
   opacity: 1;
   transition: 0.3s ease-in-out;
   width: 100%;
   height: 100%;
 }
-.works .gallery .picture img:hover {
-  opacity: 0.5;
-  cursor: zoom-in;
+.works .gallery .picture a:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.works .gallery .picture a:hover:after {
+  content: url("../img/magnifier.png");
+  width: 21px;
+  height: 21px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -100%);
+  z-index: 500;
 }
 .works > a {
   font-family: "HammersmithOneRegular";
@@ -1318,7 +1330,7 @@ header .menu-mob .menu-item {
   background: url("../img/background-review.jpeg") center/cover no-repeat;
 }
 .review .container {
-  padding: 70px 0 50px;
+  padding: 70px 0;
 }
 .review .container .slider-text-review {
   color: #fff;
