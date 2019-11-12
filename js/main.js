@@ -74,12 +74,25 @@ let buttonPlayMain = document.querySelector('.btn-play-main');
 let btnPlayPause = document.getElementById('play-pause');
 let stopBtn = document.getElementById('stop');
 let muteBtn = document.getElementById('mute');
-let progress = document.querySelector('#progress');
+let progress = document.getElementById('progress');
+
+video.addEventListener('click', function () {
+  if (video.paused) {
+      video.play();
+      buttonPlayMain.classList.add('button-main-hidden');
+      btnPlayPause.classList.add('pause');
+  } else {
+      video.pause();
+      buttonPlayMain.classList.remove('button-main-hidden');
+      btnPlayPause.classList.remove('pause');
+  }
+});
 
 buttonPlayMain.addEventListener('click', function () {
   if(video.paused) {
     video.play();
     buttonPlayMain.classList.add('button-main-hidden');
+    btnPlayPause.classList.add('pause');
   }
 });
 
@@ -100,6 +113,8 @@ btnPlayPause.addEventListener('click', function() {
 stopBtn.addEventListener('click', function() {
   video.pause();
   video.currentTime = 0;
+  buttonPlayMain.classList.remove('button-main-hidden');
+  btnPlayPause.classList.remove('pause');
 });
 
 muteBtn.addEventListener('click', function () {
@@ -110,7 +125,7 @@ muteBtn.addEventListener('click', function () {
   } else {
     muteBtn.classList.remove('mute-off');
     muteBtn.classList.add('mute-on');
-      video.muted = false;
+    video.muted = false;
   }
 });
 
