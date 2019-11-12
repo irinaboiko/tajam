@@ -14,6 +14,13 @@ $("#menu-mob").on("click", "a", function (event) {
   $('body,html').animate({scrollTop: top}, 900);
 });
 
+$("#home").on("click", "a", function (event) {
+  event.preventDefault();
+  let id  = $(this).attr('href'),
+      top = $(id).offset().top - 75 + 'px';
+  $('body,html').animate({scrollTop: top}, 900);
+});
+
 /*mobile menu*/
 
 let menuBtn = document.querySelector('.menu-btn');
