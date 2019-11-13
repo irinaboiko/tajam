@@ -28,10 +28,12 @@ let menuLines = document.querySelector('.menu-btn-lines');
 let menuMobBox = document.querySelector('.menu-box');
 let menuItem = document.querySelectorAll('.menu-item');
 
-menuBtn.addEventListener('click', function() {
-  menuLines.classList.toggle("menu-btn-active");
-  menuMobBox.classList.toggle("menu-show");
-});
+if(menuBtn) {
+  menuBtn.addEventListener('click', function() {
+    menuLines.classList.toggle("menu-btn-active");
+    menuMobBox.classList.toggle("menu-show");
+  });
+}
 
 menuItem.forEach(function(btn) {
   btn.addEventListener('click', function() {
@@ -44,12 +46,14 @@ menuItem.forEach(function(btn) {
 
 let header = document.querySelector('.header');
 
-window.onscroll = function(){
-  if(document.documentElement.scrollTop > 590){
-    header.classList.add("header-fixed");
-  }
-  else{
-    header.classList.remove("header-fixed");
+if(header) {
+  window.onscroll = function(){
+    if(document.documentElement.scrollTop > 590){
+      header.classList.add("header-fixed");
+    }
+    else{
+      header.classList.remove("header-fixed");
+    }
   }
 }
 
@@ -76,61 +80,76 @@ let stopBtn = document.getElementById('stop');
 let muteBtn = document.getElementById('mute');
 let progress = document.getElementById('progress');
 
-video.addEventListener('click', function () {
-  if (video.paused) {
+if (video) {
+  video.addEventListener('click', function () {
+    if (video.paused) {
+        video.play();
+        buttonPlayMain.classList.add('button-main-hidden');
+        btnPlayPause.classList.add('pause');
+    } else {
+        video.pause();
+        buttonPlayMain.classList.remove('button-main-hidden');
+        btnPlayPause.classList.remove('pause');
+    }
+  });
+}
+
+if(buttonPlayMain) {
+  buttonPlayMain.addEventListener('click', function () {
+    if(video.paused) {
       video.play();
       buttonPlayMain.classList.add('button-main-hidden');
       btnPlayPause.classList.add('pause');
-  } else {
-      video.pause();
-      buttonPlayMain.classList.remove('button-main-hidden');
+    }
+  });
+}
+
+if(btnPlayPause) {
+  btnPlayPause.addEventListener('click', function() {
+    if(video.paused) {
+      btnPlayPause.classList.remove('play');
+      btnPlayPause.classList.add('pause');
+      buttonPlayMain.classList.add('button-main-hidden');
+      video.play();
+    } else {
       btnPlayPause.classList.remove('pause');
-  }
-});
+      btnPlayPause.classList.add('play');
+      buttonPlayMain.classList.remove('button-main-hidden');
+      video.pause();
+    }
+  });
+}
 
-buttonPlayMain.addEventListener('click', function () {
-  if(video.paused) {
-    video.play();
-    buttonPlayMain.classList.add('button-main-hidden');
-    btnPlayPause.classList.add('pause');
-  }
-});
-
-btnPlayPause.addEventListener('click', function() {
-  if(video.paused) {
-    btnPlayPause.classList.remove('play');
-    btnPlayPause.classList.add('pause');
-    buttonPlayMain.classList.add('button-main-hidden');
-    video.play();
-  } else {
-    btnPlayPause.classList.remove('pause');
-    btnPlayPause.classList.add('play');
-    buttonPlayMain.classList.remove('button-main-hidden');
+if(stopBtn) {
+  stopBtn.addEventListener('click', function() {
     video.pause();
-  }
-});
+    video.currentTime = 0;
+    buttonPlayMain.classList.remove('button-main-hidden');
+    btnPlayPause.classList.remove('pause');
+  });
+}
 
-stopBtn.addEventListener('click', function() {
-  video.pause();
-  video.currentTime = 0;
-  buttonPlayMain.classList.remove('button-main-hidden');
-  btnPlayPause.classList.remove('pause');
-});
+if(muteBtn) {
+  muteBtn.addEventListener('click', function () {
+    if (video.muted == false) {
+        muteBtn.classList.remove('mute-on');
+        muteBtn.classList.add('mute-off');
+        video.muted = true;
+    } else {
+      muteBtn.classList.remove('mute-off');
+      muteBtn.classList.add('mute-on');
+      video.muted = false;
+    }
+  });
+}
 
-muteBtn.addEventListener('click', function () {
-  if (video.muted == false) {
-      muteBtn.classList.remove('mute-on');
-      muteBtn.classList.add('mute-off');
-      video.muted = true;
-  } else {
-    muteBtn.classList.remove('mute-off');
-    muteBtn.classList.add('mute-on');
-    video.muted = false;
-  }
-});
+if(video) {
+  video.ontimeupdate = progressUpdate;
+}
 
-video.ontimeupdate = progressUpdate;
-progress.onclick = videoRewind;
+if(progress) {
+  progress.onclick = videoRewind;
+}
 
 function progressUpdate() {
   console.log(video.duration);
