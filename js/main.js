@@ -1,12 +1,6 @@
 /*loader*/
 
 
-$(window).on('loader-inner', function () {
-  $preloader = $('.loader'),
-    $loader = $preloader.find('.loader-inner');
-  $loader.fadeOut();
-  $preloader.delay(350).fadeOut('slow');
-});
 
 
 /*scroll menu*/
