@@ -1385,16 +1385,13 @@ header .menu-mob .menu-item {
 
 @media all and (max-width: 768px) {
   .video {
-    display: none;
-    /*
     height: auto;
-
-    video {
-        width: 100%;
-        height: auto;
-        -o-object-fit: cover;
-           object-fit: cover;
-    }*/
+  }
+  .video video {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 }
 /*expertise*/
