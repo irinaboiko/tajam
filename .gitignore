@@ -1,3 +1,4 @@
 *.map
 *.scss 
 *.git
+.idea
